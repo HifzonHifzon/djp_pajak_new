@@ -1,0 +1,95 @@
+body { 
+    background: url("http://localhost/dpj_apps_new/asset/image/bk2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height:20px;
+    background-color: e75b24;
+    color:white;
+}
+
+.box_login {
+    background-color: white;
+    height:290px;
+    width: 340px;
+    border-radius : 10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10px;
+    padding:20px;
+}
+
+h4{
+    color:white;
+    text-align: center;
+    font-family: Lucida Grande, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.box_login_wrapper {
+    background-color: 0f5f3c;
+    height:380px;
+    width: 390px;
+    border-radius : 10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    padding:20px;
+}
+
+.input_login {
+    margin-top:10px;
+    border-radius: 20px;
+}
+
+.logo {
+    width: 300px;
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.btn_login {
+    width: 100%;
+    height: 40px;
+    background-color:e75b24;
+    border-radius:20px;
+    margin-top:10px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.btn_login:hover {
+    width: 100%;
+    height: 40px;
+    background-color:0f5f3c;
+    border-radius:20px;
+    margin-top:10px;
+    color:white;
+}
+
+.center {
+    display: block;
+}
+
+.img_sosmed {
+    display: block;
+    width: 20px;
+    width: 20px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.icon_sosmed{
+    justify-content: center; 
+    margin-left:85px; 
+    margin-right:85px; 
+    margin-top:5px; 
+    margin-bottom:10px; 
+}
+
+
+
