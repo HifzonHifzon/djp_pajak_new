@@ -5,20 +5,20 @@ class SuratMasuk extends CI_Controller {
   	public function __construct() {
   		parent::__construct();
 
-		  $this->load->model('Model_sm_pos');
+		$this->load->model('Model_sm_pos');
 	
 		if ($this->session->userdata('role') == '' ){
 			redirect(base_url().'login');
 		}
 
 		$check  = $this->AuthRoleMenu->check();
-        if ($check["status"] == false) {
-            $data['result'] = array(
-                "konten_file" => "Not_akses",
-                "title" 	  => "Not Found Page",
-            );
-            $this->load->view('template/layout', $data );
-        }
+        // if ($check == false) {
+        //     $data['result'] = array(
+        //         "konten_file" => "Not_akses",
+        //         "title" 	  => "Not Found Page",
+        //     );
+        //     $this->load->view('template/layout', $data );
+        // }
 
   	}
 
@@ -63,7 +63,7 @@ class SuratMasuk extends CI_Controller {
 			"recordsFiltered" => $this->Model_sm_pos->count_filtered(),
 			"data" => $data,
 		);
-		//output dalam format JSON
+
 		echo json_encode($output);
     }
     
