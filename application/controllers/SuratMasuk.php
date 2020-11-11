@@ -6,15 +6,19 @@ class SuratMasuk extends CI_Controller {
   		parent::__construct();
 
 		  $this->load->model('Model_sm_pos');
-		//   $check  = $this->AuthRoleMenu->check();
-		//   if ($check["status"] == false) {
-		// 	  $data['result'] = array(
-		// 		  "konten_file" => "Not_akses",
-		// 		  "title" 	  => "Not Found Page",
-		// 	  );
-		// 	  $this->load->view('template/layout', $data );
-		//   }
-		  
+	
+		if ($this->session->userdata('role') == '' ){
+			redirect(base_url().'login');
+		}
+
+		$check  = $this->AuthRoleMenu->check();
+        if ($check["status"] == false) {
+            $data['result'] = array(
+                "konten_file" => "Not_akses",
+                "title" 	  => "Not Found Page",
+            );
+            $this->load->view('template/layout', $data );
+        }
 
   	}
 

@@ -6,7 +6,12 @@ class Settings extends CI_Controller{
     function __construct(){
         parent::__construct();
         $this->load->model('AuthRoleMenu');
-        $check  = $this->AuthRoleMenu->check();
+      
+		if ($this->session->userdata('role') == '' ){
+			redirect(base_url().'login');
+		}
+
+		$check  = $this->AuthRoleMenu->check();
         if ($check["status"] == false) {
             $data['result'] = array(
                 "konten_file" => "Not_akses",
